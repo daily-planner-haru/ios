@@ -20,7 +20,15 @@
     "typescript": "^5.1.3"
   },
   "private": true,
-  "repository": "https://github.com/daily-planner-haru/ios.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daily-planner-haru/ios.git"
+  },
   "author": "lala-david <wnswns1946@naver.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "'하루' IOS 레포지토리",
+  "bugs": {
+    "url": "https://github.com/daily-planner-haru/ios/issues"
+  },
+  "homepage": "https://github.com/daily-planner-haru/ios#readme"
 }
