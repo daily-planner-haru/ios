@@ -6,6 +6,9 @@ export default function App() {
     <View style={styles.container}>
       <Text>🦀 안녕 영진아</Text>
       <StatusBar style="auto" />
+      <View>
+        <Text> 안녕 성준아 🐸</Text>
+      </View>
     </View>
   );
 }
