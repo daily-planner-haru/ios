@@ -1,23 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { StatusBar, View } from 'react-native';
+import Home from './src/screens/Home';
+import Login from './src/screens/Login';
+import { RootStackParamList } from './src/types/type';
+import { StackNavigationProp } from '@react-navigation/stack';
 
-export default function App() {
+const Stack = createStackNavigator<RootStackParamList>();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>🦀 안녕 영진아</Text>
-      <StatusBar style="auto" />
-      <View>
-        <Text> 안녕 성준아 🐸</Text>
-      </View>
+    <View style={{ flex: 1 }}>
+      <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Login">
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Login" component={(props: { navigation: StackNavigationProp<RootStackParamList, 'Login'> }) => <Login navigation={props.navigation} />} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
