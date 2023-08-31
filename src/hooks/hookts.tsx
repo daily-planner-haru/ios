@@ -1,12 +1,12 @@
 import { View, Text} from "react-native";
 
 
-const firebase = () => {
+const hooks = () => {
     return (
       <View>
-        <Text>firebase login</Text>
+        <Text>hooks</Text>
       </View>
     );
   };
 
-  export default firebase;
+  export default hooks;

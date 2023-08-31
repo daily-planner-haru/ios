@@ -1,12 +1,12 @@
 import { View, Text} from "react-native";
 
 
-const firebase = () => {
+const api = () => {
     return (
       <View>
-        <Text>firebase login</Text>
+        <Text>api</Text>
       </View>
     );
   };
 
-  export default firebase;
+  export default api;
